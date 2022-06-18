@@ -59,6 +59,12 @@ void Player::IsAttacked(Monster& monster)
 	ChangeHp(monster.GetAtt());
 }
 
+void Player::ActiveSkill(Monster& monster)
+{
+	GetSkill().UseSkill();
+	_att += GetSkill().GetDamage();
+}
+
 bool Player::GameOver()
 {
 	if (_hp == 0)

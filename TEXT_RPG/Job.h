@@ -5,13 +5,23 @@
 
 class Job
 {
+	typedef enum JobID
+	{
+		JOB_PROS,
+		JOB_PROF,
+		JOB_PROG,
+		JOB_MAX
+	} JobID;
+
 	const string	JOB_NAME[JOB_NUM]		= {"검사", "기사", "프로그래머"};
 	const int16		JOB_MAX_HP[JOB_NUM]		= {10, 10, 9};
 	const int16		JOB_INIT_ATT[JOB_NUM]	= {10, 10, 9};
 	const Skill*	JOB_SKILL[JOB_NUM]		= {&Pros, &Prof, &Prog};
 public:
 
-	void SelectJob(int16 jobID);
+	void SelectJob(JobID jobID);
+
+	Skill GetSkill();
 
 protected:
 	void InitStatus(int16& hp, int16& att);

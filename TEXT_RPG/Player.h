@@ -27,6 +27,8 @@ public:
 	void Attack(Monster& monster);
 
 	void IsAttacked(Monster& monster);
+	
+	void ActiveSkill(Monster& monster);
 
 	bool GameOver();
 

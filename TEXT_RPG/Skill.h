@@ -9,6 +9,8 @@ public:
 
 	void SetDamage(int16 dam);
 
+	int16 GetDamage();
+
 	virtual void UseSkill()
 	{
 		SetDamage(100);

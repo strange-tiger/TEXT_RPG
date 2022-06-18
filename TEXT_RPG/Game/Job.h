@@ -1,40 +1,29 @@
 #pragma once
 
+#include "Macro.h"
+#include "Skill.h"
+
 class Job
 {
-	static const string JobName[4];
+	const string	JOB_NAME[JOB_NUM]		= {"검사", "기사", "프로그래머"};
+	const int16		JOB_MAX_HP[JOB_NUM]		= {10, 10, 9};
+	const int16		JOB_INIT_ATT[JOB_NUM]	= {10, 10, 9};
+	const Skill*	JOB_SKILL[JOB_NUM]		= {&Pros, &Prof, &Prog};
 public:
 
-	void SelectJob()
-	{
+	void SelectJob(int16 jobID);
 
-	}
+protected:
+	void InitStatus(int16& hp, int16& att);
 
-	void InitStatus(int& hp, int& att, int& def)
-	{
-		hp	= GetMaxHp();
-		att = GetInitAtt();
-		def = GetInitDef();
-	}
+	int16 GetMaxHp();
 
-	int GetMaxHp()
-	{
-		return maxHp;
-	}
-
-	int GetInitAtt()
-	{
-		return initAtt;
-	}
-
-	int GetInitDef()
-	{
-		return initDef;
-	}
+	int16 GetInitAtt();
 
 private:
-	int maxHp;
-	int initAtt;
-	int initDef;
-	string skill;
+	string	_name		= "";
+	int16	_maxHp		= 0;
+	int16	_initAtt	= 0;
+	Skill	_skill;
+	std::vector<std::string>	_script;
 };

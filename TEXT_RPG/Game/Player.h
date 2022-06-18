@@ -1,43 +1,40 @@
 #pragma once
 
-#include "common.h"
+#include "Common.h"
 #include "Job.h"
+#include "Monster.h"
 
 class Player : public Job
 {
 public:
 
-	Player()
-	{
-		InitStatus(_hp, _att, _def);
-	}
+	Player(int16 jobID);
 
-	void SetName(string name)
-	{
-		_name = name;
-	}
+	void SetName(string name);
 
-	string GetName()
-	{
-		return _name;
-	}
+	string GetName();
 	
-	void ChangeHp(int chnHp)
-	{
-		if (_hp >= chnHp)
-			if(GetMaxHp() >= _hp - chnHp)
-				_hp -= chnHp;
-		else
-			_hp = 0;
-	}
+	void SetHp(int16 hp);
 
+	int16 GetHp();
+
+	void ChangeHp(int chnHp);
+
+	void SetAtt(int16 att);
+	
+	int16 GetAtt();
+
+	void Attack(Monster& monster);
+
+	void IsAttacked(Monster& monster);
+
+	bool GameOver();
 
 private:
-	std::string _name;
-	int _hp = 0;
-	int _att = 0;
-	int _def = 0;
-	int _money = 0;
-	std::vector<std::string> _inven;
-	std::vector<std::string> _select;
+	string		_name;
+	int16		_hp = 0;
+	int16		_att = 0;
+	int16		_money = 0;
+	// std::vector<std::string> _inven;
+	// std::vector<std::string> _select;
 };

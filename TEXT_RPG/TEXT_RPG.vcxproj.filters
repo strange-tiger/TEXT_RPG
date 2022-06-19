@@ -9,22 +9,22 @@
   <ItemGroup>
     <ClInclude Include="Common.h" />
     <ClInclude Include="Game.h" />
-    <ClInclude Include="Job.h" />
     <ClInclude Include="Macro.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
-    <ClInclude Include="Skill.h" />
     <ClInclude Include="Title.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="End.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Job.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Skill.cpp" />
     <ClCompile Include="Title.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="End.cpp" />
   </ItemGroup>
 </Project>

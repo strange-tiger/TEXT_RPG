@@ -6,6 +6,7 @@
 #include <iomanip>
 #include <vector>
 #include <random>
+#include "Macro.h"
 
 using namespace std;
 

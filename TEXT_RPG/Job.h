@@ -5,6 +5,7 @@
 
 class Job
 {
+protected:
 	typedef enum JobID
 	{
 		JOB_PROS,
@@ -13,11 +14,14 @@ class Job
 		JOB_MAX
 	} JobID;
 
+private:
 	const string	JOB_NAME[JOB_NUM]		= {"검사", "기사", "프로그래머"};
 	const int16		JOB_MAX_HP[JOB_NUM]		= {10, 10, 9};
 	const int16		JOB_INIT_ATT[JOB_NUM]	= {10, 10, 9};
 	const Skill*	JOB_SKILL[JOB_NUM]		= {&Pros, &Prof, &Prog};
 public:
+
+	virtual ~Job();
 
 	void SelectJob(JobID jobID);
 

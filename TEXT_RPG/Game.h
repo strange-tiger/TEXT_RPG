@@ -1,13 +1,18 @@
 #pragma once
 
-#include "Game/Player.h"
-#include "common.h"
+#include "Player.h"
+#include "Common.h"
+#include "Scene.h"
+#include "Input.h"
 
 class Game
 {
 public:
+	static int16 Run();
 
+	static void processInput(void);
 
-private:
+	static void update(void);
 
+	static void render(void);
 };

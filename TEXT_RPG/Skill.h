@@ -9,6 +9,8 @@ public:
 
 	void SetDamage(int16 dam);
 
+	int16 GetDamage();
+
 	virtual void UseSkill()
 	{
 		SetDamage(100);
@@ -24,11 +26,11 @@ private:
 class Programing :public Skill
 {
 public:
-	void UseSkill(Player& player)
+	/*void UseSkill(Player& player)
 	{
 		player.SetHp(65535);
 		player.SetAtt(65535);
-	}
+	}*/
 };
 
 const Skill Pros;

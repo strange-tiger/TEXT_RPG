@@ -45,10 +45,11 @@
 *	6. 선택지
 *	7. 목표?
 */
-#include "Title.h"
 #include "Game.h"
 
 int main()
 {
-	printTitle();
+	int16 appResult = Game::Run();
+
+	return appResult;
 }

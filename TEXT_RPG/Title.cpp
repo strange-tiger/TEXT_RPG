@@ -1,4 +1,5 @@
 #include "Title.h"
+#include "Input.h"
 
 void printTitle()
 {
@@ -24,16 +25,16 @@ void printTitle()
 	cout << std::right;
 	cout << title[0] << endl;
 	cout << endl;
-	Sleep(1000);
+	Sleep(500);
 	for (int i = 1; i < 13; i++)
 	{
 		cout << title[i] << endl;
-		Sleep(200);
+		Sleep(50);
 	}
-	Sleep(500);
+	Sleep(300);
 	cout << endl; cout << endl;
 	cout << setw(33);
 	cout << "- Press Enter to start -" << endl;
 
-	while (!GetAsyncKeyState(VK_RETURN));
+	while (!IS_KEY_DOWN(VK_RETURN));
 }

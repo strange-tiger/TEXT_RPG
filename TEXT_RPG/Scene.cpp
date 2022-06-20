@@ -77,6 +77,7 @@ void InGame::Update()
 	case 1:	
 		cin >> name;
 		player.SetName(name);
+		cnt++;
 		break;
 	case 2:
 		select = (int)(getchar() - '0');
@@ -110,11 +111,11 @@ void InGame::Update()
 		cnt++;
 		break;
 	case 6:
-		Monster orc;
+		/*Monster orc;
 		orc.SetName("오크");
 		orc.SetHp(100);
 		orc.SetAtt(9);
-		cout << "1. 공격 2. 스킬 3. 도망";
+		cout << "1. 공격 2. 스킬 3. 도망";*/
 		select = (int)(getchar() - '0');
 		if (select > 0 && select < 4)
 		{
